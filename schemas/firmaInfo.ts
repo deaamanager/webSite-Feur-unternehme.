@@ -10,11 +10,7 @@ export default defineType({
         title: 'Name',
         type: 'string',
       }),
-      defineField({
-        name: 'title',
-        title: 'Title',
-        type: 'string',
-      }),
+
       defineField({
         name: 'phone',
         title: 'Phone',
@@ -25,14 +21,10 @@ export default defineType({
         title: 'Email',
         type: 'string',
       }),
-      defineField({
-        name: 'address',
-        title: 'Address',
-        type: 'string',
-      }),
+
     defineField({
         name: 'image',
-        title: 'Image',
+        title: 'Banner Image',
         type: 'image',
         options: {
           hotspot: true,
@@ -46,20 +38,12 @@ export default defineType({
           hotspot: true,
         },
       }),
-      defineField({
-        name: 'description',
-        title: 'Description',
+     defineField({
+      name: 'description',
+      title: 'Description',
         type: 'text',
       }),
-      defineField({
-        name: 'descriptionImage',
-        title: 'Description Image',
-        type: 'image',
-        options: {
-          hotspot: true,
-        },
-
-      }),
+   
       defineField({
         name: 'shortTitle1',
         title: 'Short Title1',
@@ -70,32 +54,7 @@ export default defineType({
         title: 'Short Title2',
         type: 'string',
       }),
-      defineField({
-        name: 'shortTitle3',
-        title: 'Short Title3',
-        type: 'string',
-      }),
-      defineField({
-        name: 'trustTitle',
-        title: 'Trust Title',
-        type: 'string',
-      }),
-      defineField({
-        name: 'trustImage',
-        title: 'Trust Image',
-        type: 'image',
-        options: {
-          hotspot: true,
-        },
-      }),
-      defineField({
-        name: 'zertifikatImage',
-        title: 'Zertifikat Image',
-        type: 'image',
-        options: {
-          hotspot: true,
-        },
-      }),
+     
   ],
    preview: {
     select: {

@@ -24,21 +24,14 @@ interface Social extends Base {
         };
 interface FirmaInfo extends Base {  
         //_type: "firmaInfo"; 
-            name: string;
-            title: string;
+            name: string;  
             image: Image;
             logo: Image;
             description: string;
             phone: string;
-            address: string;
             email: string;
-            descriptionImage: Image;
             shortTitle1: string;
             shortTitle2: string;
-            shortTitle3: string;
-            trustTitle: string;
-            zertifikatImage: Image;
-            trustImage: Image;
         };
     
 interface Neuigkeiten extends Base {
