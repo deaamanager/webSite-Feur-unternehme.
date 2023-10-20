@@ -65,7 +65,7 @@ function Footer({ socialMedia, firmaInfo }: Props) {
             bgColor="transparent"
             fgColor={socialMedia.color}
             url={socialMedia.url}
-            className="hover:scale-[1.10] transition duration-500 ease-out  hover:border hover:border-gray-500  rounded-full p-0 hover:shadow-md hover:shadow-gray-500"
+            className={`hover:scale-[1.10] transition duration-500 ease-out  hover:border hover:border-gray-500  rounded-full p-0 hover:shadow-md hover:shadow-gray-500`}
           />
         ))}
       </div>
@@ -102,18 +102,18 @@ function Footer({ socialMedia, firmaInfo }: Props) {
             {firmaInfo.map((firmaInfo) => (
               <div
                 key={firmaInfo._id}
-                className="text-gray-300  flex flex-col items-center pl-4 md:pl-10 w-[100%] gap-y-3"
+                className="text-gray-300  flex flex-col  items-start pl-4 md:pl-10 w-full gap-y-4"
               >
-                <div className="flex flex-row md:w-full w-[50%] gap-x-2 items-center justify-center ">
+                <div className="flex flex-row md:w-full w-[50%] gap-x-2 items-start  ">
                   <PhoneIcon className="h-5 w-5  md:h-6 md:w-6" />
                   <h1>{firmaInfo.phone} </h1>
                 </div>
 
-                <div className="flex flex-row md:w-full w-[70%] gap-x-2 items-center justify-center ">
+                <div className="flex flex-row md:w-full w-[70%] gap-x-2 items-start  ">
                   <EnvelopeIcon className="h-5 w-5  md:h-6 md:w-6" />
                   <h1>{firmaInfo.email} </h1>
                 </div>
-                <div className="flex flex-row md:w-full w-[50%] gap-x-2 items-center justify-center ">
+                <div className="flex flex-row md:w-full w-[50%] gap-x-2 items-start  ">
                   <MapPinIcon className="h-5 w-5  md:h-6 md:w-6" />
                   <h1>De,Neu-Ulm </h1>
                 </div>

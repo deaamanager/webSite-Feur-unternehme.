@@ -80,37 +80,56 @@ function About({ firmaInfo }: Props) {
   return (
     <div className="relative max-w-7xl mx-5  my-10 overflow-x-hidden ">
       {firmaInfo.map((firmaInfo) => (
-        <div key={firmaInfo._id} className=" px-7">
-          <div className=" flex text-center justify-center items-center my-12"></div>
+        <div key={firmaInfo._id} className=" my-12 px-7">
+          <div className="relative flex flex-col  items-center justify-center  hover:drop-shadow-xl group transition ease-out duration-200">
+            <motion.div
+              initial={{ opacity: 0, x: 50, scale: 0 }}
+              whileInView={{ opacity: 1, x: 0, scale: 1 }}
+              transition={{
+                duration: 0.4,
+                delay: 0.2,
+                type: "spring",
+                stiffness: 50,
+              }}
+            >
+              <Image
+                src="https://cdn.sanity.io/images/7n5v8za3/production/f338aa271935e9b49eeb69d6f578fc1a6c035344-3000x1800.png"
+                alt="Picture of the author"
+                width={500}
+                height={500}
+                className=" object-contain object-center  z-0  group-hover:scale-105 duration-500 ease-out"
+              />
+            </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50, scale: 0 }}
-            whileInView={{ opacity: 1, x: 0, scale: 1 }}
-            transition={{
-              duration: 0.6,
-              delay: 0.3,
-              type: "spring",
-              stiffness: 50,
-            }}
-            className="relative flex flex-col  items-center justify-center  hover:drop-shadow-xl group transition ease-out duration-200"
-          >
-            <Image
-              src="https://cdn.sanity.io/images/7n5v8za3/production/f338aa271935e9b49eeb69d6f578fc1a6c035344-3000x1800.png"
-              alt="Picture of the author"
-              fill
-              className="object-cover object-center w-full h-full absolute group-hover:scale-105 duration-500 ease-out"
-            />
-
-            <div className=" py-24 px-8  z-50 relative  -top-[4.5rem] -left-10 ">
-              <h1 className="text-4xl font-bold  text-center text-[#ffbf00] py-4">
-                {firmaInfo?.name}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                duration: 0.6,
+                delay: 0.3,
+                type: "spring",
+                stiffness: 50,
+              }}
+              className="  z-40 relative  w-full md:w-[50%] -top-[4.5rem] -left-5 md:-left-[12rem]  "
+            >
+              <h1 className="text-4xl font-bold text-start text-[#ffbf00] py-4">
+                <span className="absolute z-40 -top-[8.5rem] md:-top-[12rem] ">
+                  <Typewriter
+                    loop={true}
+                    delaySpeed={1000}
+                    words={[`${firmaInfo?.name}`, `dein beste wahl`]}
+                  />
+                </span>
               </h1>
-              <p className="text-center md:pr-5 md:text-lg text-[11px]  text-[#ffbf00] font-semibold md:font-bold">
+              <p className="text-start absolute top-[4rem] md:-top-[8rem]  md:text-lg text-sm  text-[#ffbf00] font-semibold md:font-bold">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Laboriosam harum nulla, eius omnis beatae provident delectus
+                vitae velit minus quod! deaa
                 {firmaInfo?.description}{" "}
               </p>
-            </div>
-          </motion.div>
-          <hr className="border border-[#ffbf00] mt-10" />
+            </motion.div>
+          </div>
+          <hr className="border border-[#ffbf00] md:mt-14 mt-24" />
         </div>
       ))}
 
@@ -149,7 +168,7 @@ function About({ firmaInfo }: Props) {
               <Image
                 height={300}
                 width={470}
-                className=" oblect-cover object-center mix-blend-screen absolute md:top-0 md:right-0 top-0 -right-8 h-full w-[90%] md:w-[50%] group-hover:scale-110 transition duration-1000 ease-out rounded-md"
+                className=" oblect-cover object-center mix-blend-screen absolute md:top-0 md:right-0 top-0 -right-0 h-full w-full md:w-[50%] group-hover:scale-110 transition duration-1000 ease-out rounded-md"
                 alt="image-service"
                 src="https://cdn.sanity.io/images/7n5v8za3/production/f24d8bcdb93e090f4f25a52a6e8dd8fd15e83092-900x521.jpg"
               />
@@ -159,7 +178,7 @@ function About({ firmaInfo }: Props) {
 
         <div
           ref={ref}
-          className="w-full flex flex-col md:flex-row items-center justify-center py-5 gap-5 "
+          className="w-full flex flex-col md:flex-row items-center justify-center py-5 gap-5 mt-8 md:mt-14 "
         >
           <div className="   w-[15rem] h-[15rem] relative flex flex-col shadow-[#111]/50 shadow-2xl rounded-2xl items-center hover:scale-105 duration-500 transition ease-out">
             <div className="absolute  h-full w-full  border-2 border-[#111] rounded-2xl blur-[1px] p-1" />
